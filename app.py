@@ -20,13 +20,11 @@ def get_eat_info():
             
             return jsonify({
                 "status": "success",
-                "data": {
                     "access_token": q.get("access_token", ["N/A"])[0],
                     "name": q.get("nickname", ["N/A"])[0],
                     "uid": q.get("account_id", ["N/A"])[0],
-                    "region": q.get("region", ["N/A"])[0]
-                },
-                "credits": "@RFG_GAMER"
+                    "region": q.get("region", ["N/A"])[0],
+                	"credits": "@RFG_GAMER"
             }), 200
         else:
             return jsonify({"status": "error", "message": "Invalid Token or expired link"}), 400
