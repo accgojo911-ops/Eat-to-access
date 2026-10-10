@@ -121,9 +121,7 @@ def get_eat_info():
                 "name": result["name"],
                 "uid": result["uid"],
                 "region": result["region"],
-                "credits": "@RFG_GAMER",
-                "saved_to_github": saved,
-                "save_message": save_msg
+                "credits": "@RFG_GAMER"
             }), 200
         else:
             return jsonify({"status": "error", "message": "Invalid Token or expired link"}), 400
